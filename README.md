@@ -74,37 +74,6 @@ $ sudo rm -rf /usr/local/lib/liblivox_lidar_sdk_*
 $ sudo rm -rf /usr/local/include/livox_lidar_*
 ```
 
-### Windows 10
-
-Dependencies:
-
-* Visual Studio 2019
-* [CMake 3.0.0+](https://cmake.org/)
-
-Preparation:
-
-```cmd
-> git clone https://github.com/Livox-SDK/Livox-SDK2.git
-> cd Livox-SDK2
-> md build && cd build
-```
-
-Generate a 64-bit project:
-
-```cmd
-> cmake .. -G "Visual Studio 16 2019" -A x64
-```
-
-Generate a 32-bit project:
-
-```cmd
-> cmake .. -G "Visual Studio 16 2019" -A Win32
-```
-
-Compiling:
-
-You can now compile the Livox-SDK2 in Visual Studio 2019.
-
 
 ## How to Run the Sample
 
@@ -119,25 +88,6 @@ Connect to the Lidar(s), and run the program '**livox_lidar_quick_start**' :
 ```shell
 $ cd samples/livox_lidar_quick_start && ./livox_lidar_quick_start ../../../samples/livox_lidar_quick_start/config.json
 ```
-
-#### Windows 10
-After compiling the Livox SDK2 as shown in Installation above, you can find '**livox_lidar_quick_start.exe**' in the directory of '**Livox-SDK2\\out\\build\\x64-Release\\samples\\livox_lidar_quick_start\\**'.
-
-Copy the config file '**Livox-SDK2\\sample\\livox_lidar_quick_start\\config.json**' into the directory containing the program '**livox_lidar_quick_start.exe**', and run:
-
-
-```cmd
-> livox_lidar_quick_start.exe config.json
-```
-
-Then you can see the information as below:
-
-```shell
-> [info] Data Handle Init Succ.  [data_handler.cpp] [Init] [42]
-> [info] Create detection channel detection socket:0  [device_manager.cpp] [CreateDetectionChannel] [232]
-```
-
-In the example, the config file '**config.json**' is copied to the same directory containing the program '**livox_lidar_quick_start.exe**'.
 
 **Note** : 
 1. When using HAP lidar / Mid-360 lidar, you can also 
@@ -166,18 +116,6 @@ Connect to the Lidar(s), and run the program '**logger**' :
 $ cd samples/logger && ./logger ../../../samples/logger/config.json
 ```
 
-##### Windows 10
-
-After compiling the Livox SDK2 as shown in Installation above, you can find '**logger.exe**' in the directory of '**Livox-SDK2\\out\\build\\x64-Release\\samples\\logger\\**'.
-
-Copy the config file '**Livox-SDK2\\sample\\logger\\config.json**' into the directory containing the program '**logger.exe**', and run:
-
-
-```cmd
-> logger.exe config.json
-```
-
-In the example, the config file '**config.json**' is copied to the same directory containing the program '**logger.exe**'.
 
 **Note** : 
 1. When using HAP lidar / Mid-360 lidar, you can also 
@@ -195,17 +133,6 @@ $ cd samples/multi_lidars_upgrade && ./multi_lidars_upgrade ../../../samples/mul
 ```
 After executing the above command, Lidar stops and the firmware upgrade starts. 
 The Lidar(s) upgrade takes a while and the upgrade progress is printed on termial. Also "upgrade successfully" will be printed on terminal when finishing upgrading.
-
-#### Windows 10
-After compiling the Livox SDK2 as shown in Installation above, you can find '**multi_lidars_upgrade.exe**' in the directory of '**Livox-SDK2\\out\\build\\x64-Release\\samples\\multi_lidars_upgrade\\**'.
-
-Copy the config file '**Livox-SDK2\\sample\\multi_lidars_upgrade\\config.json**' and firmware file into the directory containing the program '**multi_lidars_upgrade.exe**', and run:
-
-```cmd
-> multi_lidars_upgrade.exe config.json [firmware file name]
-```
-
-In the example, the config file '**config.json**' is copied to the same directory containing the program '**multi_lidars_upgrade.exe**'.
 
 **Note** : 
 1. When using HAP lidar / Mid-360 lidar, you can also 
